@@ -41,9 +41,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "-"
+    "url": "https://github.com/Nodonisko/capacitor-rate-app"
   },
   "bugs": {
-    "url": "-/issues"
+    "url": "https://github.com/Nodonisko/capacitor-rate-app/issues"
   }
 }
