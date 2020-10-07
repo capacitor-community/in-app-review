@@ -6,4 +6,5 @@ declare module "@capacitor/core" {
 
 export interface CapacitorRateAppPlugin {
   requestReview(): Promise<void>;
+  showInAppReview(): Promise<void>;
 }
