@@ -41,6 +41,9 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':capacitor-android')
     implementation 'androidx.coordinatorlayout:coordinatorlayout:1.1.0'
+    implementation "androidx.appcompat:appcompat:1.2.0"
+    implementation 'com.google.android.play:core:1.8.2'
+    
     testImplementation "junit:junit:$junitVersion"
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
