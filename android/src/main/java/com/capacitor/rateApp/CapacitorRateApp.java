@@ -22,7 +22,7 @@ import com.google.android.play.core.tasks.Task;
 public class CapacitorRateApp extends Plugin {
 
     @PluginMethod()
-    public void showInAppReview(final PluginCall call) {
+    public void requestReview(final PluginCall call) {
         final ReviewManager manager = ReviewManagerFactory.create(getContext());
         final AppCompatActivity activity = getActivity();
         Task<ReviewInfo> request = manager.requestReviewFlow();
@@ -68,16 +68,5 @@ public class CapacitorRateApp extends Plugin {
                 }
             }
         });
-    }
-
-    @PluginMethod()
-    public void requestReview(PluginCall call) {
-        String appPackageName = getContext().getPackageName();
-        Log.d("Capacitor", "Opening market for ".concat(appPackageName));
-        Intent marketIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id="+appPackageName));
-        marketIntent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY | Intent.FLAG_ACTIVITY_NEW_DOCUMENT | Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
-        getContext().startActivity(marketIntent);
-
-        call.success();
     }
 }

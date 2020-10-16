@@ -13,9 +13,6 @@ export class CapacitorRateAppWeb extends WebPlugin
   async requestReview(): Promise<void> {
     return;
   }
-  async showInAppReview(): Promise<void> {
-    return;
-  }
 }
 
 const CapacitorRateApp = new CapacitorRateAppWeb();

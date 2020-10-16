@@ -51,8 +51,5 @@ No configuration needed, works out-of-box.
 import { Plugins } from "@capacitor/core";
 
 Plugins.CapacitorRateApp.requestReview();
-
-// Show in app rating dialog (Android only)
-Plugins.CapacitorRateApp.showInAppReview();
 ```
 
