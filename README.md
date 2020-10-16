@@ -1,6 +1,8 @@
 # capacitor-rate-app
 
-Let users rate your app. Very very simple. On Android opens Google Play. On iOs will show native rate app dialog.
+Let users rate your app using native rate app dialog for both Android and iOS.
+
+Please be aware of iOS limitations, [read below](#ios-limitations---important)!
 
 ![iOS rate popup](https://i2.wp.com/9to5mac.com/wp-content/uploads/sites/6/2017/01/simulator-screen-shot-25-jan-2017-12-47-41.jpg?resize=800%2C0&quality=82&strip=all&ssl=1)
 
