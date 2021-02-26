@@ -1,23 +1,9 @@
-import { WebPlugin } from "@capacitor/core";
-import { CapacitorRateAppPlugin } from "./definitions";
+import { WebPlugin } from '@capacitor/core';
 
-export class CapacitorRateAppWeb extends WebPlugin
-  implements CapacitorRateAppPlugin {
-  constructor() {
-    super({
-      name: "CapacitorRateApp",
-      platforms: ["web"]
-    });
-  }
+import { RateAppPlugin } from './definitions';
 
+export class RateAppWeb extends WebPlugin implements RateAppPlugin {
   async requestReview(): Promise<void> {
     return;
   }
 }
-
-const CapacitorRateApp = new CapacitorRateAppWeb();
-
-export { CapacitorRateApp };
-
-import { registerWebPlugin } from "@capacitor/core";
-registerWebPlugin(CapacitorRateApp);

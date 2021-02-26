@@ -1,9 +1,11 @@
 {
   "name": "capacitor-rate-app",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Rate your app in stores",
-  "main": "dist/esm/index.js",
+  "main": "dist/plugin.cjs.js",
+  "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
+  "unpkg": "dist/plugin.js",
   "scripts": {
     "build": "npm run clean && tsc",
     "clean": "rm -rf ./dist",
@@ -12,13 +14,13 @@
   },
   "author": "Daniel Suchy",
   "license": "MIT",
-  "dependencies": {
-    "@capacitor/core": "latest"
+  "peerDependencies": {
+    "@capacitor/core": "3.0.0-beta.3"
   },
   "devDependencies": {
     "typescript": "^3.2.4",
-    "@capacitor/ios": "latest",
-    "@capacitor/android": "latest"
+    "@capacitor/ios": "3.0.0-beta.3",
+    "@capacitor/android": "3.0.0-beta.3"
   },
   "files": [
     "dist/",

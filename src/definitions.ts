@@ -1,9 +1,3 @@
-declare module "@capacitor/core" {
-  interface PluginRegistry {
-    CapacitorRateApp: CapacitorRateAppPlugin;
-  }
-}
-
-export interface CapacitorRateAppPlugin {
+export interface RateAppPlugin {
   requestReview(): Promise<void>;
 }

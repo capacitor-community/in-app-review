@@ -6,7 +6,7 @@ import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.getcapacitor.NativePlugin;
+import com.getcapacitor.annotation.CapacitorPlugin;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
@@ -18,51 +18,59 @@ import com.google.android.play.core.tasks.OnFailureListener;
 import com.google.android.play.core.tasks.OnSuccessListener;
 import com.google.android.play.core.tasks.Task;
 
-@NativePlugin()
-public class CapacitorRateApp extends Plugin {
+@CapacitorPlugin(name = "RateApp")
+public class CapacitorRateApp extends Plugin
+{
 
     @PluginMethod()
-    public void requestReview(final PluginCall call) {
+    public void requestReview(final PluginCall call)
+    {
         final ReviewManager manager = ReviewManagerFactory.create(getContext());
         final AppCompatActivity activity = getActivity();
         Task<ReviewInfo> request = manager.requestReviewFlow();
         request.addOnFailureListener(new OnFailureListener() {
             @Override
-            public void onFailure(Exception e) {
+            public void onFailure(Exception e)
+            {
                 e.printStackTrace();
                 call.reject("Request Failed", e);
             }
         });
         request.addOnCompleteListener(new OnCompleteListener<ReviewInfo>() {
             @Override
-            public void onComplete(Task<ReviewInfo> task) {
+            public void onComplete(Task<ReviewInfo> task)
+            {
                 if (task.isSuccessful()) {
                     // We can get the ReviewInfo object
                     ReviewInfo reviewInfo = task.getResult();
                     Task<Void> flow = manager.launchReviewFlow(activity, reviewInfo);
                     flow.addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
-                        public void onComplete(Task<Void> task) {
+                        public void onComplete(Task<Void> task)
+                        {
                             // The flow has finished. The API does not indicate whether the user
                             // reviewed or not, or even whether the review dialog was shown. Thus, no
                             // matter the result, we continue our app flow.
-                            call.success();
+                            call.resolve();
                         }
                     });
                     flow.addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
-                        public void onSuccess(Void result) {
-                            call.success();
+                        public void onSuccess(Void result)
+                        {
+                            call.resolve();
                         }
                     });
                     flow.addOnFailureListener(new OnFailureListener() {
                         @Override
-                        public void onFailure(Exception e) {
+                        public void onFailure(Exception e)
+                        {
                             e.printStackTrace();
                             call.reject("Flow Failed", e);
                         }
                     });
-                } else {
+                }
+                else {
                     // There was some problem, continue regardless of the result.
                     call.reject("Task Failed");
                 }
