@@ -2,29 +2,29 @@
 # yarn lockfile v1
 
 
-"@capacitor/android@latest":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@capacitor/android/-/android-1.2.0.tgz#11cb2c54ce57b0650f3911721a788e6441b1e1db"
-  integrity sha512-z72KMq8FrvUvy4t9Sx0y08OBwxE+0O5b925x31k9AooGjxJltLT6E1HrT4AS0ti6ofK0X6EdfZSVRTefBpdbaw==
+"@capacitor/android@3.0.0-beta.3":
+  version "3.0.0-beta.3"
+  resolved "https://registry.yarnpkg.com/@capacitor/android/-/android-3.0.0-beta.3.tgz#50e7f2255cd736f3c2ae1366f0f213f27aa31972"
+  integrity sha512-wHaRK2O9J1YhIxb4JD2uNbQ84Fq5qGMW0+eadBxBB81OIV9MX+7MEqmIyCUHfu8SMegDYCk1uBiB9mJxkxdImg==
 
-"@capacitor/core@latest":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@capacitor/core/-/core-1.2.0.tgz#4812bae77f48f58023ff197b49fea7940403a0ff"
-  integrity sha512-K6viZ4XjhK6wNnfIGcyfod6nOd2OqIamWkFp6La6Ob5IrWG7Zxa3q1V98X081GvTxMmSeHFwz3ophaGN2IbzCA==
+"@capacitor/core@3.0.0-beta.3":
+  version "3.0.0-beta.3"
+  resolved "https://registry.yarnpkg.com/@capacitor/core/-/core-3.0.0-beta.3.tgz#a2bcdd5f7524aae05e70c5bcc7542761964a6ba9"
+  integrity sha512-RhNmwj5ERMUNQKdK1xXC9d3jhQ2IrBUAn8NMvWUOS/dR+wWyUjmwFFk6jRYaJQuxQOHWoffjIjSmefldyKqR+g==
   dependencies:
-    tslib "^1.9.0"
+    tslib "^2.1.0"
 
-"@capacitor/ios@latest":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@capacitor/ios/-/ios-1.2.0.tgz#fbec11fc1c00d569d884e7fa03630b35498135c7"
-  integrity sha512-LPe1Abix3caFX25zsRIUOWHGfCQuCoGo4pWWg78AD/1pjILNd3+uzD29pMvPwC1NsgwnZrm+nnYcUl1KSRLVpQ==
+"@capacitor/ios@3.0.0-beta.3":
+  version "3.0.0-beta.3"
+  resolved "https://registry.yarnpkg.com/@capacitor/ios/-/ios-3.0.0-beta.3.tgz#4973b683b346434cfd5e9ced859eb60053d5a64b"
+  integrity sha512-4MKs/h0exw2hPYa58p/kIlUqI7Ug64eZ/j1HpbCCalonx2JJbRQThT7K0jtUrFbySHToMPGf84SK6m7oWEW9hQ==
 
-tslib@^1.9.0:
-  version "1.10.0"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
-  integrity sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
+tslib@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.1.0.tgz#da60860f1c2ecaa5703ab7d39bc05b6bf988b97a"
+  integrity sha512-hcVC3wYEziELGGmEEXue7D75zbwIIVUMWAVbHItGPx0ziyXxrOMQx4rQEVEV45Ut/1IotuEvwqPopzIOkDMf0A==
 
-typescript@^3.2.4:
-  version "3.6.3"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.6.3.tgz#fea942fabb20f7e1ca7164ff626f1a9f3f70b4da"
-  integrity sha512-N7bceJL1CtRQ2RiG0AQME13ksR7DiuQh/QehubYcghzv20tnh+MQnQIuJddTmsbqYj+dztchykemz0zFzlvdQw==
+typescript@^4.2.3:
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.2.3.tgz#39062d8019912d43726298f09493d598048c1ce3"
+  integrity sha512-qOcYwxaByStAWrBf4x0fibwZvMRG+r4cQoTjbPtUlrWjBHbmCAww1i448U0GJ+3cNNEtebDteo/cHOR3xJ4wEw==
