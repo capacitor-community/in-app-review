@@ -7,7 +7,7 @@
       "dom",
       "es2015"
     ],
-    "module": "es2015",
+    "module": "es2020",
     "moduleResolution": "node",
     "noImplicitAny": true,
     "noUnusedLocals": true,
