@@ -18,6 +18,8 @@ or
 $ yarn add capacitor-rate-app
 ```
 
+Don't forget run `cap sync` command afterwards.
+
 ## Android configuration
 
 In file `android/app/src/main/java/**/**/MainActivity.java`, add the plugin to the initialization list:
@@ -50,8 +52,8 @@ No configuration needed, works out-of-box.
 ## Usage
 
 ```js
-import { Plugins } from "@capacitor/core";
+import { RateApp } from "capacitor-rate-app";
 
-Plugins.CapacitorRateApp.requestReview();
+RateApp.requestReview()
 ```
 
