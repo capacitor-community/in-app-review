@@ -1,4 +1,4 @@
-# capacitor-rate-app
+# Capacitor Rate App
 
 Let users rate your app using native rate app dialog for both Android and iOS.
 
@@ -57,3 +57,6 @@ import { RateApp } from "capacitor-rate-app";
 RateApp.requestReview()
 ```
 
+## Demo
+
+For more detailed example check demo app [check demo app](https://github.com/Nodonisko/rate-app-demo).
