@@ -2,22 +2,22 @@
 # yarn lockfile v1
 
 
-"@capacitor/android@3.0.0-beta.3":
-  version "3.0.0-beta.3"
-  resolved "https://registry.yarnpkg.com/@capacitor/android/-/android-3.0.0-beta.3.tgz#50e7f2255cd736f3c2ae1366f0f213f27aa31972"
-  integrity sha512-wHaRK2O9J1YhIxb4JD2uNbQ84Fq5qGMW0+eadBxBB81OIV9MX+7MEqmIyCUHfu8SMegDYCk1uBiB9mJxkxdImg==
+"@capacitor/android@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@capacitor/android/-/android-3.0.0.tgz#0d8ce965fa19d9f1412a468476525af2b92a151e"
+  integrity sha512-qyvI3LzfGvVnSK7Dw3dXXLSJjfj816EfWHiyGzV4Rg5r2XkvPa8IqjHT3lmyxwNJjGdHl3TTn9Q6YvM6XD70cQ==
 
-"@capacitor/core@3.0.0-beta.3":
-  version "3.0.0-beta.3"
-  resolved "https://registry.yarnpkg.com/@capacitor/core/-/core-3.0.0-beta.3.tgz#a2bcdd5f7524aae05e70c5bcc7542761964a6ba9"
-  integrity sha512-RhNmwj5ERMUNQKdK1xXC9d3jhQ2IrBUAn8NMvWUOS/dR+wWyUjmwFFk6jRYaJQuxQOHWoffjIjSmefldyKqR+g==
+"@capacitor/core@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@capacitor/core/-/core-3.0.0.tgz#c990688d838d523d6d473281b8a74e6b83b187d5"
+  integrity sha512-JmKE6QEayo8MqWcApwMP5YFimpVb2mcIEHBwgP/P9nSAOxOcbdpJyd9HhBt5pzZAE1MBngPADWWwZLrdNSjCnA==
   dependencies:
     tslib "^2.1.0"
 
-"@capacitor/ios@3.0.0-beta.3":
-  version "3.0.0-beta.3"
-  resolved "https://registry.yarnpkg.com/@capacitor/ios/-/ios-3.0.0-beta.3.tgz#4973b683b346434cfd5e9ced859eb60053d5a64b"
-  integrity sha512-4MKs/h0exw2hPYa58p/kIlUqI7Ug64eZ/j1HpbCCalonx2JJbRQThT7K0jtUrFbySHToMPGf84SK6m7oWEW9hQ==
+"@capacitor/ios@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@capacitor/ios/-/ios-3.0.0.tgz#1fa8c7d23810d6e4a0a07b1504270c5484598213"
+  integrity sha512-EvWW86hQqmoY0qFV1LJyZujlgfEgl4iEUJVhCv84mshMyS2bXZu5Ip4yuKtJBDsKmTWyA7rfcAnPMEnUfQ6bkw==
 
 tslib@^2.1.0:
   version "2.1.0"
