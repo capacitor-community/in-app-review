@@ -2,7 +2,7 @@
 
 Let users rate your app using native rate app dialog for both Android and iOS.
 
-Please be aware of iOS limitations, [read below](#ios-limitations---important)!
+**Please be aware of limitations for your platform, it's reason in 99% cases when dialog is not showing. Platform details: [iOS limitations](#ios-limitations---important), [Android limitations](#android-limitations---important).**
 
 ![iOS rate popup](https://i2.wp.com/9to5mac.com/wp-content/uploads/sites/6/2017/01/simulator-screen-shot-25-jan-2017-12-47-41.jpg?resize=800%2C0&quality=82&strip=all&ssl=1)
 
@@ -20,23 +20,17 @@ $ yarn add capacitor-rate-app
 
 Don't forget run `cap sync` command afterwards.
 
-## Android configuration
+## Usage
 
-In file `android/app/src/main/java/**/**/MainActivity.java`, add the plugin to the initialization list:
+```js
+import { RateApp } from 'capacitor-rate-app';
 
-```java
-import com.capacitor.rateApp.CapacitorRateApp;
-[...]
-this.init(savedInstanceState, new ArrayList<Class<? extends Plugin>>() {{
-  [...]
-  add(CapacitorRateApp.class);
-  [...]
-}});
+RateApp.requestReview();
 ```
 
-## iOS configuration
+## Demo
 
-No configuration needed, works out-of-box.
+For more detailed example check demo app [check demo app](https://github.com/Nodonisko/rate-app-demo).
 
 ## iOS limitations - IMPORTANT!
 
@@ -46,17 +40,15 @@ No configuration needed, works out-of-box.
 4. **No matter how many times you call the API, the system will only show up to a maximum of 3 prompts to the same user in a 365-day period.**
 5. The App Store defaults to showing ratings and reviews only for your app’s most recent version.
 6. The User can turn off this in settings.
-7. Apple might mandate this flow in future. 
+7. Apple might mandate this flow in future.
 8. **In dev env, dialog is always shown, but you can't submit review.**
 
-## Usage
+## Android limitations - IMPORTANT!
 
-```js
-import { RateApp } from "capacitor-rate-app";
+This is copied from [official docs:](https://developer.android.com/guide/playcore/in-app-review#quotas)
 
-RateApp.requestReview()
-```
+_To provide a great user experience, Google Play enforces a time-bound quota on how often a user can be shown the review dialog. Because of this quota, calling the launchReviewFlow method more than once during a short period of time (for example, less than a month) might not always display a dialog._
 
-## Demo
+_Because the quota is subject to change, it's important to apply your own logic and target the best possible moment to request a review. For example, you should not have a call-to-action option (such as a button) to trigger the API, as a user might have already hit their quota and the flow won’t be shown, presenting a broken experience to the user. For this use case, redirect the user to the Play Store instead._
 
-For more detailed example check demo app [check demo app](https://github.com/Nodonisko/rate-app-demo).
+_Note: The specific value of the quota is an implementation detail, and it can be changed by Google Play without any notice._

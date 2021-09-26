@@ -1,38 +1,72 @@
 {
   "name": "capacitor-rate-app",
-  "version": "1.1.0",
-  "description": "Rate your app in stores",
-  "main": "dist/plugin.js",
+  "version": "2.0.0",
+  "description": "Let users rate your app using native rate app dialog for both Android and iOS.",
+  "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
   "unpkg": "dist/plugin.js",
-  "scripts": {
-    "build": "npm run clean && tsc && rollup -c rollup.config.js",
-    "clean": "rm -rf ./dist",
-    "watch": "tsc --watch",
-    "prepublishOnly": "npm run build"
-  },
-  "author": "Daniel Suchy",
-  "license": "MIT",
-  "devDependencies": {
-    "@capacitor/android": "3.0.0",
-    "@capacitor/core": "3.0.0",
-    "@capacitor/ios": "3.0.0",
-    "typescript": "^4.2.3",
-    "@rollup/plugin-node-resolve": "^8.1.0",
-    "rollup": "^2.21.0"
-  },
   "files": [
+    "android/src/main/",
+    "android/build.gradle",
     "dist/",
-    "ios/",
-    "android/",
+    "ios/Plugin/",
     "CapacitorRateApp.podspec"
   ],
+  "author": "Daniel Suchy",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nodonisko/capacitor-rate-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Nodonisko/capacitor-rate-app/issues"
+  },
   "keywords": [
     "capacitor",
     "plugin",
     "native"
   ],
+  "scripts": {
+    "verify": "npm run verify:ios && npm run verify:android && npm run verify:web",
+    "verify:ios": "cd ios && pod install && xcodebuild -workspace Plugin.xcworkspace -scheme Plugin && cd ..",
+    "verify:android": "cd android && ./gradlew clean build test && cd ..",
+    "verify:web": "npm run build",
+    "lint": "npm run eslint && npm run prettier -- --check && npm run swiftlint -- lint",
+    "fmt": "npm run eslint -- --fix && npm run prettier -- --write && npm run swiftlint -- autocorrect --format",
+    "eslint": "eslint . --ext ts",
+    "prettier": "prettier \"**/*.{css,html,ts,js,java}\"",
+    "swiftlint": "node-swiftlint",
+    "docgen": "docgen --api CapacitorRateAppPlugin --output-readme README.md --output-json dist/docs.json",
+    "build": "npm run clean && tsc && rollup -c rollup.config.js",
+    "clean": "rimraf ./dist",
+    "watch": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^3.0.0",
+    "@capacitor/core": "^3.0.0",
+    "@capacitor/docgen": "^0.0.10",
+    "@capacitor/ios": "^3.0.0",
+    "@ionic/eslint-config": "^0.3.0",
+    "@ionic/prettier-config": "^1.0.1",
+    "@ionic/swiftlint-config": "^1.1.2",
+    "eslint": "^7.11.0",
+    "prettier": "~2.2.0",
+    "prettier-plugin-java": "~1.0.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.32.0",
+    "swiftlint": "^1.0.1",
+    "typescript": "~4.0.3"
+  },
+  "peerDependencies": {
+    "@capacitor/core": "^3.0.0"
+  },
+  "prettier": "@ionic/prettier-config",
+  "swiftlint": "@ionic/swiftlint-config",
+  "eslintConfig": {
+    "extends": "@ionic/eslint-config/recommended"
+  },
   "capacitor": {
     "ios": {
       "src": "ios"
@@ -40,12 +74,5 @@
     "android": {
       "src": "android"
     }
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Nodonisko/capacitor-rate-app"
-  },
-  "bugs": {
-    "url": "https://github.com/Nodonisko/capacitor-rate-app/issues"
   }
 }

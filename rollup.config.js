@@ -1,18 +1,22 @@
-import nodeResolve from '@rollup/plugin-node-resolve';
-
 export default {
   input: 'dist/esm/index.js',
-  output: {
-    file: 'dist/plugin.js',
-    format: 'iife',
-    name: 'capacitorPlugin',
-    sourcemap: true,
-    inlineDynamicImports: true,
-    globals: {
-      '@capacitor/core': 'capacitorExports',
+  output: [
+    {
+      file: 'dist/plugin.js',
+      format: 'iife',
+      name: 'capacitorCapacitorRateApp',
+      globals: {
+        '@capacitor/core': 'capacitorExports',
+      },
+      sourcemap: true,
+      inlineDynamicImports: true,
     },
-  },
-  plugins: [
-    nodeResolve()
-  ]
+    {
+      file: 'dist/plugin.cjs.js',
+      format: 'cjs',
+      sourcemap: true,
+      inlineDynamicImports: true,
+    },
+  ],
+  external: ['@capacitor/core'],
 };
