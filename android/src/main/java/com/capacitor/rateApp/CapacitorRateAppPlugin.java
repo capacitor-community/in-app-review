@@ -1,4 +1,4 @@
-package com.capacitor.rateapp;
+package com.capacitor.rateApp;
 
 import android.content.Context;
 import androidx.appcompat.app.AppCompatActivity;
