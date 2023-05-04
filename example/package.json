@@ -9,19 +9,19 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@capacitor/android": "^4.5.0",
-    "@capacitor/core": "^4.5.0",
-    "@capacitor/ios": "^4.5.0",
+    "@capacitor/android": "^5.0.0",
+    "@capacitor/core": "^5.0.0",
+    "@capacitor/ios": "^5.0.0",
     "capacitor-rate-app": "../",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@capacitor/cli": "^4.5.0",
+    "@capacitor/cli": "^5.0.0",
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
     "@vitejs/plugin-react": "^2.2.0",
-    "typescript": "^4.6.4",
-    "vite": "^3.2.3"
+    "typescript": "^5.0.4",
+    "vite": "^4.3.4"
   }
 }
