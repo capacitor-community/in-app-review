@@ -18,7 +18,7 @@ or
 $ yarn add capacitor-rate-app
 ```
 
-Don't forget run `cap sync` command afterwards.
+Don't forget run `cap sync` command afterwards. For Capacitor 4 use older version of this plugin (`capacitor-rate-app@3`).
 
 ## Usage
 
