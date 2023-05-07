@@ -1,6 +1,6 @@
 {
   "name": "capacitor-rate-app",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "Let users rate your app using native rate app dialog for both Android and iOS.",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
