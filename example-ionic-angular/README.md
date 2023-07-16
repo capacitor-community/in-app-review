@@ -1,38 +1,13 @@
-# Capacitor Rate App
+# Capacitor Rate App Ionic Angular Example
 
-Let users rate your app using native rate app dialog for both Android and iOS.
+Make sure you have the latest version of Ionic to test this app out:
 
-**Please be aware of limitations for your platform, it's reason in 99% cases when dialog is not showing. Platform details: [iOS limitations](#ios-limitations---important), [Android limitations](#android-limitations---important).**
-
-![iOS rate popup](https://i2.wp.com/9to5mac.com/wp-content/uploads/sites/6/2017/01/simulator-screen-shot-25-jan-2017-12-47-41.jpg?resize=800%2C0&quality=82&strip=all&ssl=1)
-
-## Installation
-
-```bash
-$ npm i --save capacitor-rate-app
+```
+npm install -g @ionic/cli
 ```
 
-or
+Turn the Ionic app into an iOS and/or Android App to test out the button to request review. Please take note of the limitations on review request below.
 
-```bash
-$ yarn add capacitor-rate-app
-```
-
-Don't forget run `cap sync` command afterwards. For Capacitor 4 use older version of this plugin (`capacitor-rate-app@3`).
-
-## Usage
-
-```js
-import { RateApp } from 'capacitor-rate-app';
-
-RateApp.requestReview();
-```
-
-## Demo
-
-For more detailed example check demo app [check demo app](https://github.com/Nodonisko/rate-app-demo).
-
-You can also check out the new Ionic Angular demo listed in the directory.
 
 ## iOS limitations - IMPORTANT!
 
