@@ -1,7 +1,7 @@
 {
-  "name": "capacitor-rate-app",
+  "name": "@capacitor-community/in-app-review",
   "version": "4.0.3",
-  "description": "Let users rate your app using native rate app dialog for both Android and iOS.",
+  "description": "Lets you prompt users to submit app store ratings and reviews without leaving your app - using platform native dialogs.",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
@@ -11,16 +11,16 @@
     "android/build.gradle",
     "dist/",
     "ios/Plugin/",
-    "CapacitorRateApp.podspec"
+    "CapacitorCommunityInAppReview.podspec"
   ],
-  "author": "Daniel Suchy",
+  "author": "",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Nodonisko/capacitor-rate-app.git"
+    "url": "git+https://github.com/capacitor-community/in-app-review.git"
   },
   "bugs": {
-    "url": "https://github.com/Nodonisko/capacitor-rate-app/issues"
+    "url": "https://github.com/capacitor-community/in-app-review/issues"
   },
   "keywords": [
     "capacitor",
@@ -33,12 +33,12 @@
     "verify:android": "cd android && ./gradlew clean build test && cd ..",
     "verify:web": "npm run build",
     "lint": "npm run eslint && npm run prettier -- --check && npm run swiftlint -- lint",
-    "fmt": "npm run eslint -- --fix && npm run prettier -- --write && npm run swiftlint -- autocorrect --format",
+    "fmt": "npm run eslint -- --fix && npm run prettier -- --write && npm run swiftlint -- --fix --format",
     "eslint": "eslint . --ext ts",
     "prettier": "prettier \"**/*.{css,html,ts,js,java}\"",
     "swiftlint": "node-swiftlint",
-    "docgen": "docgen --api CapacitorRateAppPlugin --output-readme README.md --output-json dist/docs.json",
-    "build": "npm run clean && tsc && rollup -c rollup.config.js --bundleConfigAsCjs",
+    "docgen": "docgen --api InAppReviewPlugin --output-readme README.md --output-json dist/docs.json",
+    "build": "npm run clean && npm run docgen && tsc && rollup -c rollup.config.js",
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",
     "prepublishOnly": "npm run build"
@@ -46,18 +46,18 @@
   "devDependencies": {
     "@capacitor/android": "^6.0.0",
     "@capacitor/core": "^6.0.0",
-    "@capacitor/docgen": "^0.2.1",
+    "@capacitor/docgen": "^0.2.2",
     "@capacitor/ios": "^6.0.0",
     "@ionic/eslint-config": "^0.3.0",
-    "@ionic/prettier-config": "^3.0.0",
+    "@ionic/prettier-config": "^1.0.1",
     "@ionic/swiftlint-config": "^1.1.2",
-    "eslint": "^8.39.0",
-    "prettier": "~2.8.8",
-    "prettier-plugin-java": "~2.1.0",
-    "rimraf": "^5.0.0",
-    "rollup": "^3.21.4",
-    "swiftlint": "^1.0.2",
-    "typescript": "~5.0.4"
+    "eslint": "^7.11.0",
+    "prettier": "~2.3.0",
+    "prettier-plugin-java": "~1.0.2",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.32.0",
+    "swiftlint": "^1.0.1",
+    "typescript": "~4.1.5"
   },
   "peerDependencies": {
     "@capacitor/core": "^6.0.0"
@@ -74,6 +74,5 @@
     "android": {
       "src": "android"
     }
-  },
-  "packageManager": "yarn@1.22.19"
+  }
 }

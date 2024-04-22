@@ -1,9 +1,9 @@
 import { WebPlugin } from '@capacitor/core';
 
-import type { RateAppPlugin } from './definitions';
+import type { InAppReviewPlugin } from './definitions';
 
-export class RateAppWeb extends WebPlugin implements RateAppPlugin {
+export class InAppReviewWeb extends WebPlugin implements InAppReviewPlugin {
   async requestReview(): Promise<void> {
-    return;
+    throw this.unimplemented('Not implemented on web.');
   }
 }

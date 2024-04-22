@@ -1,3 +1,3 @@
-export interface RateAppPlugin {
+export interface InAppReviewPlugin {
   requestReview(): Promise<void>;
 }

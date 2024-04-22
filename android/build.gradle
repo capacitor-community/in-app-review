@@ -20,7 +20,7 @@ buildscript {
 apply plugin: 'com.android.library'
 
 android {
-    namespace "com.capacitor.rateapp"
+    namespace "com.getcapacitor.community.inappreview"
     compileSdk project.hasProperty('compileSdkVersion') ? rootProject.ext.compileSdkVersion : 34
     defaultConfig {
         minSdkVersion project.hasProperty('minSdkVersion') ? rootProject.ext.minSdkVersion : 22

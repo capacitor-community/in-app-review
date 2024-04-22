@@ -1,10 +1,10 @@
 import { registerPlugin } from '@capacitor/core';
 
-import type { RateAppPlugin } from './definitions';
+import type { InAppReviewPlugin } from './definitions';
 
-const RateApp = registerPlugin<RateAppPlugin>('RateApp', {
-  web: () => import('./web').then(m => new m.RateAppWeb()),
+const InAppReview = registerPlugin<InAppReviewPlugin>('InAppReview', {
+  web: () => import('./web').then(m => new m.InAppReviewWeb()),
 });
 
 export * from './definitions';
-export { RateApp };
+export { InAppReview };
