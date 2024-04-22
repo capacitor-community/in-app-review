@@ -16,7 +16,7 @@
 > [!NOTE]
 > This repository is the successor to `capacitor-rate-app` by [Nodonisko](https://github.com/Nodonisko).
 >
-> Please migrate for continued support and updates.
+> Please [migrate](https://github.com/capacitor-community/in-app-review/releases/tag/v6.0.0) for continued support and updates.
 
 ## Introduction
 
