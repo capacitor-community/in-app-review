@@ -9,12 +9,10 @@ import StoreKit
                 if let windowScene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
                     AppStore.requestReview(in: windowScene)
                 }
-            } else if #available(iOS 14.0, *) {
+            } else {
                 if let windowScene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
                     SKStoreReviewController.requestReview(in: windowScene)
                 }
-            } else {
-                SKStoreReviewController.requestReview()
             }
         }
 
