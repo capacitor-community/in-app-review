@@ -59,6 +59,14 @@ import { InAppReview } from '@capacitor-community/in-app-review';
 InAppReview.requestReview();
 ```
 
+## Android
+
+### Variables
+
+This plugin will use the following project variables (defined in your app's `variables.gradle` file):
+
+- `googleAndroidPlayReviewVersion`: version of `com.google.android.play:review` (default: `2.0.1`)
+
 ## API
 
 <docgen-index>
