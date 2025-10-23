@@ -1,6 +1,6 @@
 {
   "name": "@capacitor-community/in-app-review",
-  "version": "7.0.1",
+  "version": "7.1.0",
   "description": "Lets you prompt users to submit app store ratings and reviews without leaving your app - using platform native dialogs.",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
