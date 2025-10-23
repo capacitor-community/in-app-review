@@ -7,11 +7,11 @@ import Capacitor
  */
 @objc(InAppReviewPlugin)
 public class InAppReviewPlugin: CAPPlugin, CAPBridgedPlugin {
-    public let identifier = "InAppReviewPlugin" 
-    public let jsName = "InAppReview" 
+    public let identifier = "InAppReviewPlugin"
+    public let jsName = "InAppReview"
     public let pluginMethods: [CAPPluginMethod] = [
-        CAPPluginMethod(name: "requestReview", returnType: CAPPluginReturnPromise),
-    ] 
+        CAPPluginMethod(name: "requestReview", returnType: CAPPluginReturnPromise)
+    ]
     private let implementation = InAppReview()
 
     @objc func requestReview(_ call: CAPPluginCall) {
