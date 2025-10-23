@@ -65,7 +65,7 @@ InAppReview.requestReview();
 
 This plugin will use the following project variables (defined in your app's `variables.gradle` file):
 
-- `googleAndroidPlayReviewVersion`: version of `com.google.android.play:review` (default: `2.0.1`)
+- `googleAndroidPlayReviewVersion`: version of `com.google.android.play:review` (default: `2.0.2`)
 
 ## API
 
