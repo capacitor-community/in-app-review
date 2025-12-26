@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.0.0](https://github.com/capacitor-community/in-app-review/compare/v7.1.0...v8.0.0) (2025-12-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* Capacitor 8 support (#90)
+* **android:** Update googleAndroidPlayReviewVersion default value (#86)
+
+### Features
+
+* **android:** Update googleAndroidPlayReviewVersion default value ([#86](https://github.com/capacitor-community/in-app-review/issues/86)) ([82f087f](https://github.com/capacitor-community/in-app-review/commit/82f087f4b1f365ff3ebc4505d1d1616f2631a6cb))
+* Capacitor 8 support ([#90](https://github.com/capacitor-community/in-app-review/issues/90)) ([c780b62](https://github.com/capacitor-community/in-app-review/commit/c780b6254c89f7f3d1e7fe6581391ba4f1dd3da9))
+
 ## [7.1.0](https://github.com/capacitor-community/in-app-review/compare/v7.0.1...v7.1.0) (2025-10-23)
 
 
